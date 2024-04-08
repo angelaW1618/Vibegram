@@ -47,13 +47,6 @@ export const useSignOutAccount = () => {
 };
 
 
-export const useSearchPosts = (searchTerm: string) => {
-  return useQuery({
-    queryKey: [QUERY_KEYS.SEARCH_POSTS, searchTerm],
-    queryFn: () => searchPosts(searchTerm),
-    enabled: !!searchTerm,
-  });
-};
 
 export const useGetRecentPosts = () => {
   return useQuery({
@@ -76,7 +69,8 @@ export const useGetPosts = () => {
       const lastId = lastPage.documents[lastPage.documents.length - 1].$id;
       return lastId;
     },
-  } as any);
+    initialPageParam: null,
+  });
 };
 
 
@@ -236,5 +230,12 @@ export const useUpdateUser = () => {
         queryKey: [QUERY_KEYS.GET_USER_BY_ID, data?.$id],
       });
     },
+  });
+};
+export const useSearchPosts = (searchTerm: string) => {
+  return useQuery({
+    queryKey: [QUERY_KEYS.SEARCH_POSTS, searchTerm],
+    queryFn: () => searchPosts(searchTerm),
+    enabled: !!searchTerm,
   });
 };

@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import Loader from "@/components/shared/Loader";
 import GridPostList from "@/components/shared/GridPostList";
 
+
 export type SearchResultProps = {
   isSearchFetching: boolean;
   searchedPosts: any;
