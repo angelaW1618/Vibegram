@@ -76,8 +76,9 @@ export const useGetPosts = () => {
       const lastId = lastPage.documents[lastPage.documents.length - 1].$id;
       return lastId;
     },
-  });
+  } as any);
 };
+
 
 
 export const useCreatePost = () => {
@@ -163,7 +164,7 @@ export const useLikePost = () => {
 export const useSavePost = () => {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: ({ postId, userId  }: {  postId: string; userId: string }) =>
+    mutationFn: ({ postId, userId }: { postId: string; userId: string }) =>
       savePost(postId, userId),
     onSuccess: () => {
       queryClient.invalidateQueries({
