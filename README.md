@@ -85,11 +85,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Make sure to create your own .env file and fill it with your keys and secrets for webhook access.
 
-## <a name="deploy">Deploy on Vercel</a>
+## <a name="deploy">Deploy Your React App</a>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The simplest way to deploy your React app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=react&utm_source=create-react-app&utm_campaign=create-react-app-readme), recommended by many developers for its ease of use.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For more detailed instructions on deploying React applications, you can refer to the [React deployment guidelines](https://reactjs.org/docs/deployment.html).
+
+Additionally, if your app includes Next.js components, see the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for specific deployment strategies.
+
 
 ## <a name="projects">Check Out My Other Projects</a>
 Explore more of my work at 
